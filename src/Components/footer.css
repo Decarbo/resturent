@@ -1,0 +1,71 @@
+/* General reset for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #1f2937; /* Dark gray for a clean and modern look */
+    color: #f3f4f6; /* Light gray for readable text on dark background */
+    height: 60px; /* Standard height for footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px; /* Minimal horizontal padding */
+    position: fixed;
+    bottom: 0;
+    left: 96px; /* Adjusted to align with side panel width */
+    right: 0;
+    z-index: 10; /* Ensures it stays above main content */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 96px); /* Accounts for side panel width */
+    max-width: 1200px; /* Restrict maximum width for content alignment */
+    margin: 0 auto;
+  }
+  
+  /* Footer Logo */
+  .footer-logo img {
+    height: 40px; /* Logo size for better visibility */
+    margin-right: 8px;
+  }
+  
+  /* Footer Social Links */
+  .footer-social {
+    display: flex;
+    gap: 12px; /* Even spacing between social icons */
+  }
+  
+  .footer-social .social-icon {
+    width: 24px; /* Uniform size for icons */
+    height: 24px;
+    filter: grayscale(1) brightness(0.8); /* Subtle gray effect for icons */
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-social .social-icon:hover {
+    filter: grayscale(0) brightness(1); /* Restore full color on hover */
+    transform: scale(1.2); /* Slight zoom-in effect */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-logo img {
+      margin-bottom: 8px; /* Add space between logo and social links */
+    }
+  }
+  
