@@ -71,4 +71,23 @@ const dummyApidata =  [
     "rating": 4.5
   }
 ]
+
+
+  export const carouselData = [
+    {
+      id: 1,
+      image: 'https://img.freepik.com/free-photo/club-sandwich-toast-bread-chicken-tomato-cucumber-french-fries-mayonnaise-ketchup-side-view_141793-2344.jpg?uid=R180932539&semt=ais_hybrid',
+      alt: 'Image 1',
+    },
+    {
+      id: 2,
+      image: 'https://img.freepik.com/free-photo/side-view-doner-with-grilled-chicken-greens-lettuce-tomato-french-fries-table_141793-4881.jpg?uid=R180932539&semt=ais_hybrid',
+      alt: 'Image 2',
+    },
+    {
+      id: 3,
+      image: 'https://img.freepik.com/free-photo/homemade-tasty-sandwich-tomatoes-chicken-nuggets-onions-pepper-wooden-cutting-board-ketchup-fries-blurred-surface_179666-42647.jpg?uid=R180932539&semt=ais_hybrid',
+      alt: 'Image 3',
+    },
+  ];
  export default dummyApidata;

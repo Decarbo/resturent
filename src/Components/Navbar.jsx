@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaSearch, FaHome, FaUser , FaBars } from 'react-icons/fa'
 
 const Navbar = () => {
-  const [isMenuOpen, setisMenuOpen] = useState(false)
+  const [isMenuOpen, setisMenuOpen] = useState(true)
 
   return (
     <nav className="bg-white shadow-md  w-full z-20 top-0">
