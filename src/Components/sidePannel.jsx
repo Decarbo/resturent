@@ -1,21 +1,43 @@
-import React from "react";
-import "./sidePannel.css"
+import {React,useState} from "react";
+import "../CSS/sidePannel.css"
+import { Link} from "react-router-dom"
 
-export  function SidePanel() {
 
-  const handleMenuClick = () => {
-    window.location.href = "/new-page"; // route of menu page
-  };
+const SidePannel = () => 
+  {
+    const [isVisible, setIsVisible] = useState(true);
 
-  return (
-    <div>
-      <div className="side-panel"></div>
+    const handleClick = () => {
+      setIsVisible(false); // Set visibility to false when clicked
+    };
 
-      <div className="circle-menu">
-        <div className="circle-button" onClick={handleMenuClick}>
-          <span>MENU</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+    return(
+
+      <>
+        {isVisible && 
+        (
+          <>
+            <div className="side-panel"></div>
+      
+      
+            <div className="circle-menu">
+            <div className="circle-button" >
+        
+            <span>
+              <Link to="/menu" onClick={handleClick}>
+              MENU
+              </Link>
+        
+            </span>
+        
+            </div>
+            </div>
+          </>
+        )}
+     
+      </>
+    );
+  }
+
+
+export default SidePannel;

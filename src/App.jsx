@@ -1,23 +1,32 @@
 import './App.css';
-import Card from '../src/Components/Card';
-import Navbar from '../src/Components/Navbar';
-import { SidePanel } from './Components/sidePannel';
-import { Footer } from './Components/Footer';
-import Crousel from './Components/Crousel';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom'
+import Menu from './pages/Menu';
+import Home from './pages/Home';
+import PageNotFound from './pages/pageNotFound';
 
 function App() {
 	return (
-		<div className="flex flex-col gap-6">
-			<div className="sticky top-0 z-50 ">
-				<Navbar />
-			</div>
-			<div className=" flex justify-between p-2 ">
-				{/* <Card /> */}
-				<Crousel />
-			</div>
-			{/* <div><SidePanel/></div> */}
-			{/* <div><Footer/></div> */}
-		</div>
+		<>
+
+			
+
+
+			<Routes>
+				<Route path="/" element={<Home/>}/>
+				<Route path="/menu" element={<Menu/>}/>
+				<Route path="*"     element={<PageNotFound/>}/>
+			</Routes>
+		
+
+		</>
+	
+
+		
+		
+		
+			
+		
 	);
 }
 
